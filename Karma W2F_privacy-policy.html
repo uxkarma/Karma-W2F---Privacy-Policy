@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karma W2F – Privacy Policy</title>
+<meta name="description" content="How the Karma W2F browser extension handles your data.">
+<style>
+  :root {
+    --bg: #fbfbfd;
+    --ink: #1c1c26;
+    --muted: #5d5d6e;
+    --rule: #dcdce6;
+    --accent: #4338ca;
+    --panel: #f1f0fb;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14141b;
+      --ink: #e9e9f2;
+      --muted: #a2a2b6;
+      --rule: #2e2e3d;
+      --accent: #a5a0ff;
+      --panel: #1d1d29;
+      color-scheme: dark;
+    }
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Charter, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+  main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem 5rem;
+  }
+  h1, h2 {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  h1 { font-size: 2.1rem; margin: 0 0 0.5rem; }
+  h2 { font-size: 1.2rem; margin: 2.6rem 0 0.6rem; }
+  p, ul { margin: 0.75rem 0; }
+  ul { padding-left: 1.3rem; }
+  li { margin: 0.4rem 0; }
+  a { color: var(--accent); text-underline-offset: 0.18em; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .meta { color: var(--muted); font-size: 0.98rem; margin: 0; }
+  .summary {
+    margin: 1.8rem 0 0;
+    padding: 1rem 1.2rem;
+    background: var(--panel);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+  }
+  .summary p { margin: 0.4rem 0; }
+  footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.95rem; }
+  @media print { body { background: #fff; color: #000; } a { color: #000; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Karma W2F – Privacy Policy</h1>
+  <p class="meta">Effective date: 25 October 2026<br>
+  Published by: Kaushal Varma (“we”, “us”)<br>
+  Contact: <a href="mailto:kaushalvarma108@gmail.com">kaushalvarma108@gmail.com</a></p>
+
+  <div class="summary">
+    <p><strong>In short:</strong> Karma W2F turns webpages you choose into editable layers for Figma. It does its work on your computer. It has no accounts, no analytics, no advertising and no servers of its own, and it does not send the pages you capture to us or to anyone else. We never sell or share your data.</p>
+  </div>
+
+  <h2>What the extension processes</h2>
+  <p>When you capture a page or a component, the extension reads that page in your browser: its structure, layout, styles, fonts, text, images, SVG graphics, canvas content and video poster frames. This is everything visible on the page, so it can include personal information that the page happens to show you. The page’s title and web address are recorded as well, and they appear in the exported design and in the optional checklist. In the language of the Chrome Web Store, this is “website content”.</p>
+  <p>Password fields, hidden fields, file fields and common payment or identity fields (such as card numbers, security codes, social security numbers and one-time codes) are masked or left out. The extension recognises them by their input type, their autocomplete setting and their name, ID or label, so this protection is a best effort. Other visible text, including text you typed into ordinary fields, is captured as it appears.</p>
+
+  <h2>Where captured data goes</h2>
+  <ul>
+    <li><strong>Single-page and component captures</strong> are built in your browser’s memory and written to your clipboard. The extension does not save them.</li>
+    <li><strong>Advanced Mode (batch captures)</strong> keeps each result in the extension’s local storage on your device until you copy and delete it, clear the table, or restart the browser, whichever comes first.</li>
+    <li><strong>Preferences</strong> (theme, capture mode and a few switches) are kept in the extension’s local storage on your device.</li>
+  </ul>
+  <p>None of this is transmitted to us or to any third party.</p>
+
+  <h2>Network requests the extension makes</h2>
+  <p>The extension has no backend. The only requests it makes go to websites you are capturing, and they are plain downloads:</p>
+  <ul>
+    <li>To include an image, font or stylesheet that the page uses but that the browser would not let the page read directly, the extension may download it from the website that hosts it. These requests happen only while you are running a capture. They send no cookies and no referrer, and they are limited to images, fonts and stylesheets. Addresses on private or local networks are refused.</li>
+    <li>Code running on the page you are capturing may re-read images and SVG files from that same site.</li>
+    <li>In the Advanced Mode dashboard, when you click Scan, the extension requests the web address you entered so it can list the pages linked from it.</li>
+  </ul>
+
+  <h2>Why the extension asks for its permissions</h2>
+  <ul>
+    <li><strong>Access to all websites:</strong> so you can capture any page you choose and download that page’s assets during a capture.</li>
+    <li><strong>Debugger:</strong> to emulate a mobile, tablet, desktop or custom screen width without resizing your window. Chrome shows its standard “debugging” banner while this is active, and the extension detaches when the capture ends. It does not record your browsing.</li>
+    <li><strong>Scripting and tabs:</strong> to run the capture on the tab you chose, to open the dashboard, and to open and close temporary tabs during batch captures.</li>
+    <li><strong>Storage and unlimited storage:</strong> to keep your preferences and the temporary results of batch captures, which can be large.</li>
+    <li><strong>Clipboard write:</strong> to put the captured design on your clipboard so you can paste it into Figma.</li>
+  </ul>
+
+  <h2>How we use data</h2>
+  <p>We do not sell your data, and we do not transfer or use it for anything other than providing the single purpose of the extension: converting a webpage into editable Figma layers. We do not use it for advertising, profiling, or to judge creditworthiness or eligibility for lending. No human at our end can read your captured data, because it never reaches us. The use of information received through the extension adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+
+  <h2>Keeping and deleting data</h2>
+  <p>Single captures are not stored. Batch results are deleted when you remove a row, clear the table, or restart the browser. Preferences stay until you uninstall the extension, which removes everything it stored. Anything you pasted into Figma is governed by Figma’s own terms and privacy policy.</p>
+
+  <h2>Children</h2>
+  <p>The extension is a design tool and is not directed at children under 13.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If the extension’s data handling changes, we will update this page and its effective date before the change takes effect.</p>
+
+  <h2>Trademarks</h2>
+  <p>Figma is a trademark of Figma, Inc. Karma W2F is an independent tool and is not affiliated with or endorsed by Figma, Inc.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy can be sent to <a href="mailto:kaushalvarma108@gmail.com">kaushalvarma108@gmail.com</a>.</p>
+
+  <footer>Karma W2F – Privacy Policy – effective 25 October 2026</footer>
+</main>
+</body>
+</html>
